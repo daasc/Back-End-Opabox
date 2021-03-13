@@ -1,11 +1,15 @@
+//arquivo onde manipulamos os dados, onde fica a regra do negócio, e onde ocorrer a comunicação com o banco de dados 
 class Interlace {
   _converterStringOfArray(valor) {
+    //verificando se o dados estão vindo como string ou object caso seja string vou transforma-la 
+    //em um array e todos do seus valores serão do tipo numéricos
     if(typeof valor === "string"){
       return valor
         .replace(/[\[\].'@><|://\\]/g, "")
         .split(",")
         .map(Number);
     } 
+    //retorna o array com valores do tipo numéricos
     return valor.map(Number);
   }
   async intervalo(paramentroA, paramentroB) {

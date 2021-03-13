@@ -1,5 +1,5 @@
 const { check } = require("express-validator");
-
+//validando as dados com express-validator. Verificando se o campo tem valor, se é array, e se é um do tipo numérico ou string
 class OrdenarListaValidation {
   order() {
     return [
