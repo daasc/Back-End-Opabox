@@ -8,9 +8,9 @@ class Interlace {
     } 
     return valor.map(Number);
   }
-  async breaks(paramsA, paramsB) {
-    const intervaloA = this._converterStringOfArray(paramsA);
-    const intervaloB = this._converterStringOfArray(paramsB);
+  async intervalo(paramentroA, paramentroB) {
+    const intervaloA = this._converterStringOfArray(paramentroA);
+    const intervaloB = this._converterStringOfArray(paramentroB);
     try {
       if (
         (intervaloB[0] >= intervaloA[0]) & (intervaloB[0] <= intervaloA[1]) ||

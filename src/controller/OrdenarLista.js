@@ -1,8 +1,8 @@
-class OrdenaLista {
+class OrdenarLista {
   _sort(a, b) {
     return a - b;
   }
-  async order(list) {
+  async ordernar(list) {
     try {
       list.listas.salaN.sort(this._sort);
       list.listas.salaS.sort();
@@ -13,4 +13,4 @@ class OrdenaLista {
   }
 }
 
-module.exports = OrdenaLista;
+module.exports = OrdenarLista;

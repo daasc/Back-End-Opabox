@@ -1,18 +1,18 @@
 const express = require("express");
 const { validationResult } = require("express-validator");
-const OrdenaLista = require("../controller/OrdenaLista");
-const OrdenaListaValidation = require("../validation/OrdenaLista");
-const ordenaListaValidation = new OrdenaListaValidation();
-const ordenaLista = new OrdenaLista();
+const OrdenarLista = require("../controller/OrdenarLista");
+const OrdenarListaValidation = require("../validation/OrdenarLista");
+const ordenarListaValidation = new OrdenarListaValidation();
+const ordenarLista = new OrdenarLista();
 const router = express.Router();
 
-router.post("/", ordenaListaValidation.order(), async (req, res) => {
+router.post("/", ordenarListaValidation.order(), async (req, res) => {
   try {
     const erro = validationResult(req);
     if (!erro.isEmpty()) {
       return res.status(400).send({ erros: erro.array() });
     }
-    const result = await ordenaLista.order(req.body);
+    const result = await ordenarLista.ordernar(req.body);
     res.status(201).send(result);
   } catch (error) {
     res.status(400).send(error);

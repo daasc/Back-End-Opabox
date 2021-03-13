@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
     const {
       query: { intervaloA, intervaloB }
     } = req;
-    const result = await interlace.breaks(intervaloA, intervaloB);
+    const result = await interlace.intervalo(intervaloA, intervaloB);
     res.status(201).send(result);
   } catch (error) {
     res.status(400).send(error);

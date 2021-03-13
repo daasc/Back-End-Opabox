@@ -1,6 +1,6 @@
 const { check } = require("express-validator");
 
-class OrdenaListaValidation {
+class OrdenarListaValidation {
   order() {
     return [
       check("listas.salaN")
@@ -37,4 +37,4 @@ class OrdenaListaValidation {
   }
 }
 
-module.exports = OrdenaListaValidation;
+module.exports = OrdenarListaValidation;

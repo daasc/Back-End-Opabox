@@ -4,7 +4,7 @@
 ```
 npm install
 ```
-### Compiles and hot-reloads for development
+### Command to run the project
 ```
 npm start
 ```
